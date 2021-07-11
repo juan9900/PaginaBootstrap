@@ -19,7 +19,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $("html, body").animate(
           {
-            scrollTop: target.offset().top + -300,
+            scrollTop: target.offset().top + -100,
           },
           1000
         );
