@@ -1,14 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      document.getElementById("navbar_top").classList.add("fixed-top");
-      // add padding top to show content behind navbar
-      navbar_height = document.querySelector(".navbar").offsetHeight;
-      document.body.style.paddingTop = navbar_height + "px";
-    } else {
-      document.getElementById("navbar_top").classList.remove("fixed-top");
-      // remove padding top from body
-      document.body.style.paddingTop = "0";
+/* Ir a las secciones */
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function (event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top + -300,
+          },
+          1000
+        );
+      }
     }
   });
-});
