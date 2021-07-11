@@ -1,32 +1,39 @@
-nav a{
-    font-size: 1.4em;
+nav a {
+  font-size: 1.4em;
 }
 
-.navbar-brand{
-    font-size: 1.6em;
+.navbar-brand {
+  font-size: 1.6em;
 }
 
-.navbar{
-    padding: 10px;
+.navbar {
+  padding: 10px;
 }
 
-.inicio{
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+.inicio {
+  height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(../img/setup1.jpg);
   background-attachment: scroll, scroll;
   background-position: bottom;
   background-size: cover;
 }
 
-section{
-    margin-bottom: 10px;
+section {
+  margin-bottom: 18px;
 }
 
- .row{
-    margin-bottom: 15px;
+.row {
+  margin-bottom: 90px;
 }
 
+.card img {
+  width: 150px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
 footer {
   height: auto;
   background-color: #000;
@@ -73,3 +80,4 @@ footer p {
   footer p {
     font-size: 12px;
   }
+}
